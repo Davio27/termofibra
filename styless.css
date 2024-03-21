@@ -1,0 +1,1352 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* keyframes  animation*/
+@keyframes sliderLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes sliderRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes sliderTop {
+    
+    0% {
+        transform: translateY(100px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Crimson', serif;
+}
+:root{
+    --bg-color: #9b9da9;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --back: #000;
+    --azul1: #f0f3fa;
+    --azul2: #D5DEEF;
+    --azul3: #B1C9FE;
+    --azul4: #8AAEE0;
+    --azul5: #638ecb;
+    --azul6: #395886;
+}
+html{
+    font-size: 62.5%;
+    overflow: visible ;
+}
+body {
+    background: var(--azul6);
+    color: var(--back);
+    width: 100%;
+    height: 100vh;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 90;
+    background-color: var(--azul6);
+}
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.header .logo img {
+    width: 70px; 
+    margin-right: 10px;
+}
+
+.header .logo h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    border: 2px solid var(--azul5);
+    background-color: transparent;
+    border-radius: 16px;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    display: flex;
+    height: 120px;
+}
+
+.header .logo {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+}
+.header .logo span{
+    width: 40px;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--back);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: .3s;
+    animation: sliderTop .4s ease forwards;
+    animation-delay: calc(.7s * var(--i));
+}
+.navbar h2{
+    font-size: 20px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--azul5);
+}
+
+.navbar .cor {
+    color: #0ef;
+}
+
+.menu-icon{
+    display: none;
+}
+
+
+
+/* secão Home */
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content{
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.home-content h1:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: sliderTop 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.home-content h1 span{
+    color: var(--azul1);
+}
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    animation: sliderRight 1s ease forwards;;
+    animation-delay: .1s;
+}
+
+.home-content p{
+    font-size: 20px;
+    text-align: justify;
+    animation: sliderLeft 1s ease forwards;;
+    animation-delay: .1s;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Layolt da Imagem */
+.home-img img{
+    width: 35vw;
+    margin-right: -150px;
+    animation: zoonIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+}
+
+/* personalizar os iconis de redes sociais */
+.social-media{
+    width: 100%;
+    display: flex;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items:  center;
+    width: 180px;
+    height: 60px;
+    background: transparent;
+    border: none;
+    border-radius: 17px;
+    font-size: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 90px 15px 30px 0;
+    animation: sliderLeft 1s ease forwards;;
+    animation-delay: calc(.3s * var(--i));
+}
+.social-media a i{
+    font-size: 30px;
+    z-index: 100;
+}
+.social-media .insta{
+    background: linear-gradient(to bottom, #8a3ab9, #f7b928); /* Degradê de roxo a amarelo */;
+}
+.social-media .insta:hover{
+    background: linear-gradient(to bottom, #6f3382, #e0a82b); /* Altera as cores no hover */
+}
+.social-media .whats{
+    background: linear-gradient(to bottom, #25d366, #128c7e); /* Degradê de verde a verde-azulado */;
+}
+.social-media .whats:hover{
+    background: linear-gradient(to bottom, #128c7e, #075e54); /* Altera as cores no hover */
+}
+ /* clarear ao passar o cursor em cima */
+.social-media a:hover{
+    color: var(--azul1);
+    box-shadow: 0 0 20px #0ef;
+}
+/* sessão sobre */
+.Sobre {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10% 0;
+    background: var(--azul1);
+}
+
+.Sobre-img1,
+.Sobre-img2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sobre-img1 img{
+    width: 22vw;
+    height: 35vw;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 100px;
+}
+.Sobre-img2 img {
+    width: 35vw;
+    height: 21vw;
+    border-radius: 10px;
+    margin-top: 14vw;
+    align-items: center;
+    margin-left: -330px;
+}
+
+.Sobre-content {
+    flex: 1;
+    display: grid;
+    margin-top: -580px;
+    margin-left: -870px;
+    text-align: justify;
+}
+
+.heading {
+    text-align: center;
+    font-size: 50px;
+    padding: 50px;
+}
+
+.Sobre-content h2 {
+    text-align: center;
+    line-height: 1.2;
+    vertical-align: inherit;
+    display: flex;
+}
+
+.Sobre-content h2 span {
+    color: var(--azul6);
+    margin-left: 10px;
+}
+
+.history {
+    color: var(--azul5);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.Sobre .linha{
+    font-size: 25vw
+}
+.Sobre-content p{
+    font-size: 16px;
+    text-align: justify;
+    width: 80%;
+}
+
+/* sessã serviços */
+
+.Serviços{
+    width:100%;
+    height: 100%;
+    display: center;
+    align-items: center;  
+}
+.Serviços h2{
+    margin-bottom: 80px;
+}
+.Serviços h2 span{
+    color: var(--azul1);
+}
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+
+}
+.slide img{
+    width: 800px;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+#radio1:checked~.first{
+    margin-left: 0;
+}
+#radio2:checked~.first{
+    margin-left: -25%;
+}
+#radio3:checked~.first{
+    margin-left: -50%;
+}
+#radio4:checked~.first{
+    margin-left: -75%;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;   
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+@keyframes slide {
+    0% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    100% { margin-left: 0; }
+}
+
+.slides {
+    animation: slide 20s infinite;
+}
+
+
+/* sessão categoria */
+.Categoria{
+    width:100%;
+    height: 80%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+}
+.Categoria-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.Categoria-container .Categoria-box {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.Categoria-box img {
+    width:  100%;
+    transition: .5s ease;
+
+}
+.Categoria-box {
+    transition: transform 0.3s ease;
+}
+
+/* .Categoria-layer a */
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.button i{
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.Categoria-box .Categoria-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 0, 0,), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+    z-index: 2;
+}
+ .Categoria-box:hover .Categoria-layer{
+    transform: translateY(0);
+    background-color: #0b0d0f92;
+}
+
+.texto h4{
+    font-size: 5rem;
+    z-index: 1;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: .5s ease; 
+}
+
+.Categoria-box:hover .texto h4 {
+    transform: translateX(-50%);
+}
+
+.Categoria-layer p{
+    font-size: 4rem;
+    margin: .3rem 0 1rem;
+    color: white;
+}
+.Categoria-layer a{
+    position: absolute;
+    top: 350px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Categoria-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+/* Sessão Janela Modal */
+/* CSS atualizado */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.882);
+    z-index: 91;
+}
+
+.Categoria-container .modal-box{
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    border-radius: 8rem;
+}
+.Categoria-container .close-button{
+    top: 18%;
+    left: 87%;
+    display: flex;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+}
+.close-button i{
+    width: 100%;
+    height: 100%;
+    font-size: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-button:hover{
+    background: 0 0 15px rgb(205, 12, 12);
+    color: #db1717;
+    box-shadow: 0 0 30px rgb(205, 12, 12);
+}
+.modal-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.modal-content a:hover{
+    background: var(--text-color);
+    color: #1f242d;
+    box-shadow: 0 0 15px rgb(228, 240, 241);
+}
+.image-collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* aumentando o tamanho mínimo para 150px */
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    width: 80%;
+    height: 90%;
+    z-index: 100;
+}
+
+.image-collection img {
+    width: 100%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    border-radius: 15px;
+    z-index: 100;
+    transition: transform 0.3s ease; /* Adicionando uma transição suave */
+}
+
+.image-collection img.ampliada {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7); /* Amplia a imagem em 50% */
+    z-index: 1000; /* Coloca a imagem sobre todas as outras */
+}
+
+
+
+/* Sessão Redes */
+
+.Redes{
+    width:100%;
+    height: 100%;
+    display: center;
+    align-items: center;  
+    background: var(--azul2);
+}
+.Redes h2{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.Redes h2 span{
+    color: var(--azul6);
+}
+
+.Redes-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    filter: none;
+    
+}
+.card {
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    position: relative;
+    filter: none;
+    background-color: transparent;
+    width: 500px;
+    height: 300px;
+    border-radius: 32px;
+    border: transparent;
+    box-shadow: 0 20px 40px -10px rgba(var(--bg-color)); /* Adjusted box shadow */
+}
+.Redes-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    filter: none;
+}
+.Redes-container .Redes-box h3{
+    color: var(--bg-color);
+}
+.Redes-box h3{
+    font-size: 40px;
+}
+.card-front, 
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 32px;
+    border: transparent;
+}
+.card-front {
+    background: linear-gradient(to bottom, #000, #395886);
+}
+.card-front i{
+    font-size: 15rem;
+    width: 200px;
+    margin-top: 18px;
+    color: #1f242d;
+}
+.card-back {
+    background: linear-gradient(to right, var(--second-bg-color), #22303a);    
+    box-shadow: 0 5px 20px #3498db;
+    transform: rotateY(180deg);
+}
+.card-back i{
+    font-size: 15rem;
+    color: #0ef;
+    width: 140px;
+    margin-top: 1rem;
+    transform: perspective(3000px) rotateY(5deg);
+}
+.card-back h1 {
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* sessão contato */
+
+.contato h2 {
+    margin-bottom: 48px
+}
+.contato form{
+    max-width: 70rem;
+    margin:  1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contato{
+    background: var(--azul6);
+    width:100%;
+    height: 100%;
+    display: center;
+    align-items: center;  
+}
+.contato h2 span{
+    color: var(--main-color);
+}
+
+.contato form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contato form .input-box input, .contato form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contato form .input-box input{
+    width: 49%;
+}
+.contato form textarea{
+    resize: none;
+}
+.contato form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    text-align: center;
+}
+.btn1 {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(to right, #032030, #022B42, #003554, #004D74, #006494, #006DA4);
+    border-radius: 25px;
+    font-size: 16px;
+    color: var(--text-color);
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.error{
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #040404;
+    background: var(--text-color);
+    width: 250px;
+    height: 150px;
+    z-index: 100;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    animation: blink 2s ease infinite;
+    overflow: hidden;
+    position: relative;
+}
+.error i{
+    font-size: 4rem;
+    margin-left: 20px;
+}
+.error button {
+    position: absolute;
+    top: 5px; /* Ajuste conforme necessário para a posição vertical */
+    right: 5px; /* Ajuste conforme necessário para a posição horizontal */
+    font-size: 1rem; /* Ajuste o tamanho do texto do botão conforme necessário */
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+.footer-text p{
+   font-size: 1.6rem; 
+}
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+
+}
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+
+/* Responsividade */
+
+@media (max-width: 1400px ){
+    .Sobre{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1050px ){
+    .menu-icon{
+        display: block;
+        font-size: 3rem;
+        color: var(--back);
+        background-color: var(--azul6);
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 .0rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .modal-content h4{
+        left: 38%;
+        position: fixed;
+    }
+}
+@media only screen and (max-width: 950px) and (min-width: 901px){
+    .modal-content h4{
+        left: 37%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 3.2rem;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width: 850px){
+    .modal-content h4{
+        left: 36%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 3.2rem;
+    }
+}
+@media only screen and (max-width: 850px) and (min-width: 801px){
+    .modal-content h4{
+        left: 35%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 750px){
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .modal-content h4{
+        left: 34%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 751px) and (min-width: 701px){
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .modal-content h4{
+        left: 34%;
+        position: fixed;
+    }
+}
+@media only screen and (max-width: 700px) and (min-width: 650px){
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .modal-content h4{
+        left: 32%;
+        position: fixed;
+    }
+}
+@media only screen and (max-width: 650px) and (min-width: 601px){
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .modal-content h4{
+        left: 31%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 601px) and (min-width: 550px){
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .portfolio-container .portfolio-box{
+        width: 500px;
+    }
+    .modal-content h4{
+        left: 29%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 2rem;
+    }
+    .contato form{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 550px) and (min-width: 500px){
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .portfolio-container .portfolio-box{
+        width: 500px;
+    }
+    .modal-content h4{
+        left: 26%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 2rem;
+    }
+    .contato form{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 500px) and (min-width: 450px){
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .card{
+        width: 400px;
+    }
+    .card-front h3{
+        font-size: 3rem;
+    }
+    .card-back h1{
+        font-size: 2.5rem
+    }
+    .portfolio-container .portfolio-box{
+        width: 400px;
+        height: 300px;
+    }
+    .portfolio-layer h4{
+        font-size: 3.5rem;
+    }
+    .portfolio-layer p{
+        font-size: 2rem;
+    }
+    .portfolio-layer a{
+        top: 83%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .portfolio-layer a i{
+        font-size: 1.8rem;
+    }
+    .button{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .button i{
+        font-size: 2.1rem;
+    }
+    .modal-content h4{
+        left: 28%;
+        position: fixed;
+        font-size: 2.5rem;
+    }
+    .modal-content p{
+        font-size: 2rem;
+    }
+    .contato form{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 450px) and (min-width: 400px){
+    .home-img{
+        display: none;
+    }
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .card{
+        width: 360px;
+        height: 240px;
+    }
+    .card-front i {
+        font-size: 9rem;
+    }
+    .card-front h3{
+        font-size: 3rem;
+    }
+    .card-back h1{
+        font-size: 2rem;
+    }
+    .card-back i{
+        font-size: 8rem;
+    }
+    .portfolio-container .portfolio-box{
+        width: 360px;
+        height: 240px;
+    }
+    .portfolio-layer h4{
+        font-size: 3rem;
+    }
+    .portfolio-layer p{
+        font-size: 1.8rem;
+    }
+    .portfolio-layer a{
+        top: 80%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .portfolio-layer a i{
+        font-size: 1.8rem;
+    }
+    .button{
+        width: 4rem;
+        height: 4rem;
+    }
+    .button i{
+        font-size: 1.9rem;
+    }
+    .modal-content h4{
+        font-size: 2.5rem;
+        left: 26%;
+        position: fixed;
+    }
+    .modal-content p{
+        top: 30%;
+        font-size: 2rem;
+    }
+    .contato form{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 400px) and (min-width: 350px){
+    html{
+        align-items: center;
+    }
+    .home-img{
+        display: none;
+    }
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .heading{
+        font-size: 4rem;
+    }
+    .card{
+        width: 320px;
+        height: 210px;
+    }
+    .card-front i {
+        font-size: 9rem;
+    }
+    .card-front h3{
+        font-size: 2.5rem;
+    }
+    .card-back h1{
+        font-size: 1.8rem;
+    }
+    .card-back i{
+        font-size: 8rem;
+    }
+    .portfolio-container .portfolio-box{
+        width: 320px;
+        height: 210px;
+    }
+    .portfolio-layer h4{
+        font-size: 2.5rem;
+    }
+    .portfolio-layer p{
+        font-size: 1.4rem;
+    }
+    .portfolio-layer a{
+        top: 80%;
+        width: 2rem;
+        height: 2rem;
+    }
+    .portfolio-layer a i{
+        font-size: 1.6rem;
+    }
+    .button{
+        width: 3rem;
+        height: 3rem;
+    }
+    .button i{
+        font-size: 1.8rem;
+    }
+    .modal-content h4{
+        font-size: 2rem;
+        left: 30%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 1.6rem;
+    }
+    .modal-content a{
+        left: 47%;
+    }
+    .contato form{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 350px) and (min-width: 300px){
+    html{
+        align-items: center;
+    }
+    .logo{
+        font-size: 1.6rem;
+    }
+    .home-content h1{
+        font-size: 3.8rem;
+    }
+    .home-content h3{
+        font-size: 2rem;
+    }
+    .home-img{
+        display: none;
+    }
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .heading{
+        font-size: 3.4rem;
+    }
+    .card{
+        width: 300px;
+        height: 200px;
+    }
+    .card-front i {
+        font-size: 9rem;
+    }
+    .card-front h3{
+        font-size: 2.5rem;
+    }
+    .card-back h1{
+        font-size: 1.8rem;
+    }
+    .card-back i{
+        font-size: 8rem;
+    }
+    .portfolio-container .portfolio-box{
+        width: 300px;
+        height: 200px;
+    }
+    .portfolio-layer h4{
+        font-size: 2.5rem;
+    }
+    .portfolio-layer p{
+        font-size: 1.4rem;
+    }
+    .portfolio-layer a{
+        top: 80%;
+        width: 2rem;
+        height: 2rem;
+    }
+    .portfolio-layer a i{
+        font-size: 1.6rem;
+    }
+    .button{
+        width: 3rem;
+        height: 3rem;
+    }
+    .button i{
+        font-size: 1.8rem;
+    }
+    .modal-content h4{
+        font-size: 2rem;
+        left: 28%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 1.9rem;
+    }
+    .modal-content a{
+        left: 47%;
+    }
+    .contato form{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 300px){
+    html{
+        align-items: center;
+        justify-content: center;
+    }
+    .logo{
+        font-size: 1.6rem;
+    }
+    .menu-icon{
+        right: 90%;
+    }
+    .home-img{
+        display: none;
+    }
+    .Sobre-img img{
+        width: 60vw;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .card{
+        width: 250px;
+        height: 175px;
+    }
+    .card-front i {
+        font-size: 6rem;
+    }
+    .card-front h3{
+        font-size: 2rem;
+    }
+    .card-back h1{
+        font-size: 1.4rem;
+    }
+    .card-back i{
+        font-size: 6rem;
+    }
+    .portfolio-container .portfolio-box{
+        width: 250px;
+        height: 175px;
+    }
+    .portfolio-layer h4{
+        font-size: 1.8rem;
+    }
+    .portfolio-layer p{
+        font-size: 1.4rem;
+    }
+    .portfolio-layer a{
+        top: 78%;
+        width: 2rem;
+        height: 2rem;
+    }
+    .portfolio-layer a i{
+        font-size: 1.6rem;
+    }
+    .button{
+        width: 3rem;
+        height: 3rem;
+    }
+    .button i{
+        font-size: 1.8rem;
+    }
+    .modal-content h4{
+        font-size: 1.8rem;
+        left: 28%;
+        position: fixed;
+    }
+    .modal-content p{
+        font-size: 1.2rem;
+    }
+    .modal-content a{
+        left: 47%;
+        width: 1rem;
+        height: 2rem;
+    }
+    .contato form{
+        width: 80%;
+    }
+
+}
