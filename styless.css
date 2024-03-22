@@ -869,11 +869,41 @@ body {
 }
 
 
+
 /* Responsividade */
 
-@media (max-width: 1400px ){
+/* Renderização */
+@media (max-width: 1800px ){
     .Sobre{
-        flex-direction: column;
+        flex-direction: row;
+        display: flex;
+        
+    }
+    .Sobre-img1{
+        display: none;
+    }
+    .heading{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .Sobre-content p{
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: justify;
+        margin-left: 10%;
+    }
+    .Sobre-img2 img{
+        align-items: center;
+        width: 500px;
+        height: 300px;
+        z-index: 80;
+        margin-left: 10%;
+    }
+    .heading span {
+        margin-left: 15px; /* Adicione o espaçamento necessário */
     }
 }
 
@@ -881,7 +911,7 @@ body {
     .menu-icon{
         display: block;
         font-size: 3rem;
-        color: var(--back);
+        color: var(--text-color);
         background-color: var(--azul6);
     }
     .navbar {
@@ -903,450 +933,189 @@ body {
         font-size: 2rem;
         margin: 3rem 0;
     }
-    .modal-content h4{
-        left: 38%;
-        position: fixed;
+    .Sobre-img2 img{
+        margin-left: 0%;
     }
-}
-@media only screen and (max-width: 950px) and (min-width: 901px){
-    .modal-content h4{
-        left: 37%;
-        position: fixed;
+    .Categoria-container .Categoria-box {
+        width: 300px;
+        height: 200px;
     }
-    .modal-content p{
-        font-size: 3.2rem;
+    .texto h4{
+        font-size: 4rem;
     }
-}
-@media only screen and (max-width: 900px) and (min-width: 850px){
-    .modal-content h4{
-        left: 36%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 3.2rem;
-    }
-}
-@media only screen and (max-width: 850px) and (min-width: 801px){
-    .modal-content h4{
-        left: 35%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 3rem;
-    }
-}
-@media only screen and (max-width: 800px) and (min-width: 750px){
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .modal-content h4{
-        left: 34%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 3rem;
-    }
-}
-@media only screen and (max-width: 751px) and (min-width: 701px){
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .modal-content h4{
-        left: 34%;
-        position: fixed;
-    }
-}
-@media only screen and (max-width: 700px) and (min-width: 650px){
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .modal-content h4{
-        left: 32%;
-        position: fixed;
-    }
-}
-@media only screen and (max-width: 650px) and (min-width: 601px){
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .modal-content h4{
-        left: 31%;
-        position: fixed;
-    }
-    .modal-content p{
+    .Categoria-layer p{
         font-size: 2rem;
-    }
-}
-@media only screen and (max-width: 601px) and (min-width: 550px){
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .portfolio-container .portfolio-box{
-        width: 500px;
-    }
-    .modal-content h4{
-        left: 29%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 2rem;
-    }
-    .contato form{
-        width: 90%;
-    }
-}
-@media only screen and (max-width: 550px) and (min-width: 500px){
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .portfolio-container .portfolio-box{
-        width: 500px;
-    }
-    .modal-content h4{
-        left: 26%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 2rem;
-    }
-    .contato form{
-        width: 90%;
-    }
-}
-@media only screen and (max-width: 500px) and (min-width: 450px){
-    .Sobre-img img{
-        width: 60vw;
     }
     .card{
-        width: 400px;
+        width: 300px;
+        height: 200px;
     }
-    .card-front h3{
-        font-size: 3rem;
-    }
-    .card-back h1{
-        font-size: 2.5rem
-    }
-    .portfolio-container .portfolio-box{
-        width: 400px;
-        height: 300px;
-    }
-    .portfolio-layer h4{
-        font-size: 3.5rem;
-    }
-    .portfolio-layer p{
-        font-size: 2rem;
-    }
-    .portfolio-layer a{
-        top: 83%;
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    .portfolio-layer a i{
-        font-size: 1.8rem;
-    }
-    .button{
-        width: 4.5rem;
-        height: 4.5rem;
-    }
-    .button i{
-        font-size: 2.1rem;
-    }
-    .modal-content h4{
-        left: 28%;
-        position: fixed;
-        font-size: 2.5rem;
-    }
-    .modal-content p{
-        font-size: 2rem;
-    }
-    .contato form{
-        width: 90%;
-    }
-}
-@media only screen and (max-width: 450px) and (min-width: 400px){
-    .home-img{
-        display: none;
-    }
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .card{
-        width: 360px;
-        height: 240px;
-    }
-    .card-front i {
+    .card-front i{
         font-size: 9rem;
     }
     .card-front h3{
         font-size: 3rem;
     }
-    .card-back h1{
-        font-size: 2rem;
-    }
-    .card-back i{
-        font-size: 8rem;
-    }
-    .portfolio-container .portfolio-box{
-        width: 360px;
-        height: 240px;
-    }
-    .portfolio-layer h4{
-        font-size: 3rem;
-    }
-    .portfolio-layer p{
-        font-size: 1.8rem;
-    }
-    .portfolio-layer a{
-        top: 80%;
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    .portfolio-layer a i{
-        font-size: 1.8rem;
-    }
-    .button{
-        width: 4rem;
-        height: 4rem;
-    }
-    .button i{
-        font-size: 1.9rem;
-    }
-    .modal-content h4{
-        font-size: 2.5rem;
-        left: 26%;
-        position: fixed;
-    }
-    .modal-content p{
-        top: 30%;
-        font-size: 2rem;
-    }
-    .contato form{
-        width: 90%;
-    }
-}
-@media only screen and (max-width: 400px) and (min-width: 350px){
-    html{
-        align-items: center;
+    .home-content p{
+        font-size: 1.6rem;
     }
     .home-img{
-        display: none;
+        width: 30vw;
     }
-    .Sobre-img img{
-        width: 60vw;
+    body{
+        overflow-x: hidden;
     }
+}
+@media only screen and (max-width: 950px){
+    .home-img {
+        position: absolute;
+        bottom: 0px; 
+        left: 50%; /* Centralizar horizontalmente */
+        transform: translateX(-50%);
+    }
+    
+    .home-img img {
+        width: 35vw;
+        margin-right: -150px;
+        animation: zoonIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+        animation-delay: 2s, 3s;
+    }
+    .Sobre-img2 img{
+        margin-left: -10%;
+    }
+    .contato{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+@media only screen and (max-width: 900px){
+    .Sobre-content h2{
+        margin-left: 10%;
+    }
+    .Sobre-content p{
+        margin-left: 15%;
+    }
+    .slide img{
+        width: 500px;
+        margin-left: 20%;
+    }
+}
+@media only screen and (max-width: 850px){
+    .Sobre-content p{
+        margin-left: 18%;
+    }
+    .Sobre-content h2{
+        margin-left: 15%;
+    }
+}
+@media only screen and (max-width: 800px){
+    .Sobre-content p{
+        margin-left: 20%;
+    }
+    .Sobre-content h2{
+        margin-left: 20%;
+    }
+    .Categoria-container .Categoria-box {
+        display: grid;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 751px){
+    .Sobre-content p{
+        font-size: 1.8rem;
+    }
+    .Sobre-img2 img{
+       margin-left: -20%;
+    }
+}
+@media only screen and (max-width: 700px){
+    .Sobre-content p{
+        font-size: 1.8rem;
+        margin-left: 23%;
+    }
+    .Sobre-img2 img{
+       margin-left: -25%;
+    }
+    .slide img{
+        width: 500px;
+        margin-left: 15%;
+    }
+}
+@media only screen and (max-width: 650px){
+    .Sobre-content p{
+        font-size: 1.8rem;
+        margin-left: 25%;
+    }
+    .Sobre-img2 img{
+       margin-left: -30%;
+    }
+}
+@media only screen and (max-width: 601px){
     .heading{
         font-size: 4rem;
     }
-    .card{
-        width: 320px;
-        height: 210px;
+    .Sobre-content h2{
+        margin-left: 30%
     }
-    .card-front i {
-        font-size: 9rem;
-    }
-    .card-front h3{
-        font-size: 2.5rem;
-    }
-    .card-back h1{
+    .Sobre-content p{
         font-size: 1.8rem;
+        margin-left: 35%;
+        width: 60%;
     }
-    .card-back i{
-        font-size: 8rem;
+    .Sobre-img2 img{
+       margin-left: -35%;
+       width: 450px;
     }
-    .portfolio-container .portfolio-box{
-        width: 320px;
-        height: 210px;
-    }
-    .portfolio-layer h4{
-        font-size: 2.5rem;
-    }
-    .portfolio-layer p{
-        font-size: 1.4rem;
-    }
-    .portfolio-layer a{
-        top: 80%;
-        width: 2rem;
-        height: 2rem;
-    }
-    .portfolio-layer a i{
-        font-size: 1.6rem;
-    }
-    .button{
-        width: 3rem;
-        height: 3rem;
-    }
-    .button i{
-        font-size: 1.8rem;
-    }
-    .modal-content h4{
-        font-size: 2rem;
-        left: 30%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 1.6rem;
-    }
-    .modal-content a{
-        left: 47%;
-    }
-    .contato form{
-        width: 90%;
+    .slide img{
+        width: 500px;
+        margin-left: 10%;
     }
 }
-@media only screen and (max-width: 350px) and (min-width: 300px){
-    html{
-        align-items: center;
+@media only screen and (max-width: 550px){
+    .slide img{
+        width: 500px;
+        margin-left: 5%;
     }
-    .logo{
-        font-size: 1.6rem;
+    .Sobre-content p{
+        margin-left: 37%;
     }
-    .home-content h1{
-        font-size: 3.8rem;
+}
+@media only screen and (max-width: 500px){
+    .Sobre-content h2{
+        margin-left: 37%
     }
-    .home-content h3{
-        font-size: 2rem;
+    .Sobre-content p{
+        margin-left: 40%;
+        width: 60%;
     }
-    .home-img{
+    .Sobre-img2 img{
+       margin-left: -37%;
+       width: 400px;
+       height: 250px;
+    }
+    .slide img{
+        width: 500px;
+        margin-left: 0%;
+    }
+}
+@media only screen and (max-width: 450px){
+    .home-img {
         display: none;
     }
-    .Sobre-img img{
-        width: 60vw;
+}
+@media only screen and (max-width: 400px){
+    .home-img {
+        display: none;
     }
-    .heading{
-        font-size: 3.4rem;
-    }
-    .card{
-        width: 300px;
-        height: 200px;
-    }
-    .card-front i {
-        font-size: 9rem;
-    }
-    .card-front h3{
-        font-size: 2.5rem;
-    }
-    .card-back h1{
-        font-size: 1.8rem;
-    }
-    .card-back i{
-        font-size: 8rem;
-    }
-    .portfolio-container .portfolio-box{
-        width: 300px;
-        height: 200px;
-    }
-    .portfolio-layer h4{
-        font-size: 2.5rem;
-    }
-    .portfolio-layer p{
-        font-size: 1.4rem;
-    }
-    .portfolio-layer a{
-        top: 80%;
-        width: 2rem;
-        height: 2rem;
-    }
-    .portfolio-layer a i{
-        font-size: 1.6rem;
-    }
-    .button{
-        width: 3rem;
-        height: 3rem;
-    }
-    .button i{
-        font-size: 1.8rem;
-    }
-    .modal-content h4{
-        font-size: 2rem;
-        left: 28%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 1.9rem;
-    }
-    .modal-content a{
-        left: 47%;
-    }
-    .contato form{
-        width: 90%;
+}
+@media only screen and (max-width: 350px){
+    .home-img {
+        display: none;
     }
 }
 @media only screen and (max-width: 300px){
-    html{
-        align-items: center;
-        justify-content: center;
-    }
-    .logo{
-        font-size: 1.6rem;
-    }
-    .menu-icon{
-        right: 90%;
-    }
-    .home-img{
+    .home-img {
         display: none;
-    }
-    .Sobre-img img{
-        width: 60vw;
-    }
-    .heading{
-        font-size: 3rem;
-    }
-    .card{
-        width: 250px;
-        height: 175px;
-    }
-    .card-front i {
-        font-size: 6rem;
-    }
-    .card-front h3{
-        font-size: 2rem;
-    }
-    .card-back h1{
-        font-size: 1.4rem;
-    }
-    .card-back i{
-        font-size: 6rem;
-    }
-    .portfolio-container .portfolio-box{
-        width: 250px;
-        height: 175px;
-    }
-    .portfolio-layer h4{
-        font-size: 1.8rem;
-    }
-    .portfolio-layer p{
-        font-size: 1.4rem;
-    }
-    .portfolio-layer a{
-        top: 78%;
-        width: 2rem;
-        height: 2rem;
-    }
-    .portfolio-layer a i{
-        font-size: 1.6rem;
-    }
-    .button{
-        width: 3rem;
-        height: 3rem;
-    }
-    .button i{
-        font-size: 1.8rem;
-    }
-    .modal-content h4{
-        font-size: 1.8rem;
-        left: 28%;
-        position: fixed;
-    }
-    .modal-content p{
-        font-size: 1.2rem;
-    }
-    .modal-content a{
-        left: 47%;
-        width: 1rem;
-        height: 2rem;
-    }
-    .contato form{
-        width: 80%;
     }
 
 }
