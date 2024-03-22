@@ -146,4 +146,19 @@ menuIcon.onclick = () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a')
 
+window.addEventListener('resize', function() {
+    if (window.innerWidth < 800) {
+        document.body.style.overflowX = 'hidden'; // Bloqueia overflow horizontal
+    } else {
+        document.body.style.overflowX = 'auto'; // Permite overflow horizontal
+    }
+});
+
+// Verifique o tamanho da tela ao carregar a página
+if (window.innerWidth < 800) {
+    document.body.style.overflowX = 'hidden'; // Bloqueia overflow horizontal
+} else {
+    document.body.style.overflowX = 'auto'; // Permite overflow horizontal
+}
+
 
