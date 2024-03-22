@@ -136,7 +136,6 @@ function rotateCard(card) {
     }
 }
 
-// Menu de guia
 let menuIcon = document.querySelector('.menu-icon');
 let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
@@ -146,6 +145,5 @@ menuIcon.onclick = () => {
 }
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a')
-
 
 
