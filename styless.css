@@ -1156,8 +1156,8 @@ body {
         width: 60%;
     }
     .Sobre-img2 img{
-       margin-left: -40%;
-       width: 450px;
+       margin-left: -45%;
+       width: 370px;
     }
     .slide img{
         width: 500px;
@@ -1168,6 +1168,9 @@ body {
     }
 }
 @media only screen and (max-width: 400px){
+    .home-img{
+        display: none;
+    }
     .Sobre-content h2{
         margin-left: 43%
     }
@@ -1177,8 +1180,7 @@ body {
         width: 60%;
     }
     .Sobre-img2 img{
-       margin-left: -43%;
-       width: 450px;
+       margin-left: -47%;
     }
     .slide img{
         width: 500px;
@@ -1201,8 +1203,7 @@ body {
         width: 60%;
     }
     .Sobre-img2 img{
-       margin-left: -45%;
-       width: 450px;
+       margin-left: -50%;
     }
     .slide img{
         width: 500px;
@@ -1222,7 +1223,7 @@ body {
         width: 60%;
     }
     .Sobre-img2 img{
-       margin-left: -47%;
+       margin-left: -53%;
        width: 450px;
     }
     .slide img{
