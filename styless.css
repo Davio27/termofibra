@@ -442,7 +442,7 @@ body {
 /* sessão categoria */
 .Categoria{
     width:100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     align-items: center;  
     justify-content: center;
@@ -987,6 +987,9 @@ body {
         width: 90%;
         margin-left: 5%;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
 @media only screen and (max-width: 900px){
     .Sobre-content h2{
@@ -999,6 +1002,9 @@ body {
         width: 500px;
         margin-left: 20%;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
 @media only screen and (max-width: 850px){
     .Sobre-content p{
@@ -1006,6 +1012,9 @@ body {
     }
     .Sobre-content h2{
         margin-left: 15%;
+    }
+    body{
+        overflow-x: hidden;
     }
 }
 @media only screen and (max-width: 800px){
@@ -1019,6 +1028,9 @@ body {
         display: grid;
         flex-direction: column;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
 @media only screen and (max-width: 751px){
     .Sobre-content p{
@@ -1026,6 +1038,9 @@ body {
     }
     .Sobre-img2 img{
        margin-left: -20%;
+    }
+    body{
+        overflow-x: hidden;
     }
 }
 @media only screen and (max-width: 700px){
@@ -1040,6 +1055,9 @@ body {
         width: 500px;
         margin-left: 15%;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
 @media only screen and (max-width: 650px){
     .Sobre-content p{
@@ -1048,6 +1066,9 @@ body {
     }
     .Sobre-img2 img{
        margin-left: -30%;
+    }
+    body{
+        overflow-x: hidden;
     }
 }
 @media only screen and (max-width: 601px){
@@ -1070,6 +1091,9 @@ body {
         width: 500px;
         margin-left: 10%;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
 @media only screen and (max-width: 550px){
     .slide img{
@@ -1079,8 +1103,15 @@ body {
     .Sobre-content p{
         margin-left: 37%;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
+/* estou aqui */
 @media only screen and (max-width: 500px){
+    .heading{
+        font-size: 3rem;
+    }
     .Sobre-content h2{
         margin-left: 37%
     }
@@ -1097,25 +1128,112 @@ body {
         width: 500px;
         margin-left: 0%;
     }
+    body{
+        overflow-x: hidden;
+    }
+    .Categoria-container .Categoria-box {
+        width: 270px;
+        height: 150px;
+    }
+    .card{
+        width: 270px;
+        height: 150px;
+    }
+    .card-front i{
+        font-size: 6rem;
+    }
+    .card-front h3{
+        font-size: 2rem;
+    }
 }
 @media only screen and (max-width: 450px){
-    .home-img {
-        display: none;
+    .Sobre-content h2{
+        margin-left: 40%
+    }
+    .Sobre-content p{
+        font-size: 1.8rem;
+        margin-left: 43%;
+        width: 60%;
+    }
+    .Sobre-img2 img{
+       margin-left: -40%;
+       width: 450px;
+    }
+    .slide img{
+        width: 500px;
+        margin-left: -5%;
+    }
+    body{
+        overflow-x: hidden;
     }
 }
 @media only screen and (max-width: 400px){
-    .home-img {
-        display: none;
+    .Sobre-content h2{
+        margin-left: 43%
+    }
+    .Sobre-content p{
+        font-size: 1.8rem;
+        margin-left: 45%;
+        width: 60%;
+    }
+    .Sobre-img2 img{
+       margin-left: -43%;
+       width: 450px;
+    }
+    .slide img{
+        width: 500px;
+        margin-left: -7%;
+    }
+    body{
+        overflow-x: hidden;
     }
 }
 @media only screen and (max-width: 350px){
     .home-img {
         display: none;
     }
+    .Sobre-content h2{
+        margin-left: 45%
+    }
+    .Sobre-content p{
+        font-size: 1.8rem;
+        margin-left: 47%;
+        width: 60%;
+    }
+    .Sobre-img2 img{
+       margin-left: -45%;
+       width: 450px;
+    }
+    .slide img{
+        width: 500px;
+        margin-left: -10%;
+    }
+    body{
+        overflow-x: hidden;
+    }
 }
 @media only screen and (max-width: 300px){
+    .Sobre-content h2{
+        margin-left: 47%
+    }
+    .Sobre-content p{
+        font-size: 1.6rem;
+        margin-left: 50%;
+        width: 60%;
+    }
+    .Sobre-img2 img{
+       margin-left: -47%;
+       width: 450px;
+    }
+    .slide img{
+        width: 500px;
+        margin-left: -13%;
+    }
     .home-img {
         display: none;
+    }
+    body{
+        overflow-x: hidden;
     }
 
 }
