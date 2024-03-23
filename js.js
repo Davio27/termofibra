@@ -161,4 +161,46 @@ if (window.innerWidth < 800) {
     document.body.style.overflowX = 'auto'; // Permite overflow horizontal
 }
 
+// JavaScript para o Slide
+let slideIndex = 0;
+let slideInterval;
+
+// Iniciar o carrossel
+showSlides();
+
+function plusSlides(n) {
+  clearTimeout(slideInterval);
+  showSlides(slideIndex += n);
+}
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  slideInterval = setTimeout(showSlides, 2000); // Altere este valor para definir o intervalo de troca de slides (em milissegundos)
+}
+
+// Adicionar eventos aos botões de navegação
+document.querySelector('.prev').addEventListener('click', function() {
+  plusSlides(-1);
+});
+
+document.querySelector('.next').addEventListener('click', function() {
+  plusSlides(1);
+});
+
+// Reiniciar a passagem automática após 10 segundos de inatividade do usuário
+function restartSlideInterval() {
+  clearTimeout(slideInterval);
+  slideInterval = setTimeout(showSlides, 10000);
+}
+
+document.querySelector('.prev').addEventListener('click', restartSlideInterval);
+document.querySelector('.next').addEventListener('click', restartSlideInterval);
+
 
