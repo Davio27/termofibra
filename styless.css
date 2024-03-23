@@ -360,10 +360,11 @@ body {
 /* sessã serviços */
 
 .Serviços{
-    width:100%;
-    height: 100%;
     display: center;
+    justify-content: center; /* Centraliza os itens horizontalmente */
     align-items: center;  
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas da seção */
+    position: relative;  
 }
 .Serviços h2{
     margin-bottom: 80px;
@@ -373,7 +374,7 @@ body {
 }
 .slider{
     margin: 0 auto;
-    width: 800px;
+    width: 100%;
     height: 600px;
     overflow: hidden;
 }
