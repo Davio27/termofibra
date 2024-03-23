@@ -233,11 +233,8 @@ body {
 
 /* Layolt da Imagem */
 .home-img img{
-    width: 22vw;
-    height: 35vw;
-    border-radius: 10px;
-    align-items: center;
-    margin-left: 100px;
+    width: 35vw;
+    margin-right: -150px;
     animation: zoonIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
 }
