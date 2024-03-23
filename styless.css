@@ -234,7 +234,7 @@ body {
 /* Layolt da Imagem */
 .home-img img{
     width: 35vw;
-    margin-right: -150px;
+    margin-right: 0vw;
     animation: zoonIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
 }
