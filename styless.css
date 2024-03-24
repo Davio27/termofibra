@@ -281,6 +281,8 @@ body {
     color: var(--azul1);
     box-shadow: 0 0 20px #0ef;
 }
+
+
 /* sessão sobre */
 .Sobre {
     position: relative;
@@ -290,71 +292,40 @@ body {
     justify-content: center;
     align-items: center;
     padding: 70px 10% 0;
-    background: var(--azul1);
+    background-color: var(--azul2);
 }
-
-.Sobre-img1,
-.Sobre-img2 {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Sobre-img1 img{
-    width: 22vw;
-    height: 35vw;
-    border-radius: 10px;
-    align-items: center;
-    margin-left: 100px;
-}
-.Sobre-img2 img {
-    width: 35vw;
-    height: 21vw;
-    border-radius: 10px;
-    margin-top: 14vw;
-    align-items: center;
-    margin-left: -330px;
-}
-
-.Sobre-content {
-    flex: 1;
-    display: grid;
-    margin-top: -580px;
-    margin-left: -870px;
-    text-align: justify;
-}
-
 .heading {
     text-align: center;
     font-size: 50px;
     padding: 50px;
+    
 }
-
-.Sobre-content h2 {
+.Sobre-content h2{
     text-align: center;
     line-height: 1.2;
-    vertical-align: inherit;
-    display: flex;
+    margin-top: -10%;
 }
-
-.Sobre-content h2 span {
+.Sobre-content h2 span{
     color: var(--azul6);
-    margin-left: 10px;
-}
-
-.history {
-    color: var(--azul5);
-    margin-bottom: 20px;
-    text-align: center;
-}
-.Sobre .linha{
-    font-size: 25vw
 }
 .Sobre-content p{
-    font-size: 16px;
+    font-size: 20px;
     text-align: justify;
-    width: 80%;
+}
+.Sobre-img2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Sobre-img2 img {
+    width: 55%;
+    height: 30%;
+    border-radius: 10px;
+    margin-top: 5%;
+    align-items: center;
+}
+.linha {
+    font-size: 30rem;
 }
 
 /* sessã serviços */
@@ -443,7 +414,7 @@ body {
     gap: 32px;
 }
 .Categoria-container .Categoria-box {
-    width: 500px;
+    width: 450px;
     height: 300px;
     position: relative;
     border-radius: 2rem;
@@ -545,80 +516,65 @@ body {
 .modal {
     display: none;
     position: fixed;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.882);
-    z-index: 91;
+    z-index: 1000; /* Ajustado o z-index para cobrir outros elementos */
+    overflow: auto; /* Adicionado overflow para rolar o conteúdo se necessário */
 }
 
-.Categoria-container .modal-box{
-    top: 15%;
-    left: 5%;
-    width: 90%;
-    height: 80%;
+.modal-box {
     position: relative;
-    overflow: hidden;
-    display: flex;
-    border-radius: 8rem;
+    width: 90%;
+    height: 90%;
+    margin: 5% auto; /* Centraliza verticalmente */
+    overflow: hidden; /* Adicionado overflow para conteúdo maior que a janela */
 }
-.Categoria-container .close-button{
-    top: 18%;
-    left: 87%;
-    display: flex;
-    position: fixed;
-    width: 4rem;
-    height: 4rem;
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     background-color: transparent;
+    z-index: 1100; /* Ajustado o z-index para estar sobre a modal */
 }
-.close-button i{
+
+.close-button i {
     width: 100%;
     height: 100%;
-    font-size: 4.8rem;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.close-button:hover{
-    background: 0 0 15px rgb(205, 12, 12);
-    color: #db1717;
-    box-shadow: 0 0 30px rgb(205, 12, 12);
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.1); /* Ajustado o fundo do botão */
+    color: #fff;
 }
-.modal-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    
-}
-.modal-content a:hover{
-    background: var(--text-color);
-    color: #1f242d;
-    box-shadow: 0 0 15px rgb(228, 240, 241);
-}
+
 .image-collection {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* aumentando o tamanho mínimo para 150px */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajustado para um layout de grade responsivo */
     grid-gap: 10px;
     align-items: center;
     justify-content: center;
     overflow: auto;
-    width: 80%;
-    height: 90%;
-    z-index: 100;
+    padding: 20px; /* Adicionado preenchimento */
 }
 
 .image-collection img {
-    width: 100%;
-    margin-bottom: 2%;
+    max-width: 100%; /* Ajustado para manter a proporção da imagem */
+    max-height: 100%; /* Ajustado para manter a proporção da imagem */
     cursor: pointer;
     border-radius: 15px;
-    z-index: 100;
     transition: transform 0.3s ease; /* Adicionando uma transição suave */
 }
 
@@ -626,9 +582,11 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.7); /* Amplia a imagem em 50% */
-    z-index: 1000; /* Coloca a imagem sobre todas as outras */
+    transform: translate(-50%, -50%) scale(1); /* Amplia a imagem */
+    z-index: 1100; /* Ajustado o z-index para estar sobre a modal */
 }
+
+
 
 
 
@@ -664,11 +622,11 @@ body {
 .card {
     align-items: center;
     justify-content: center;
-    display:flex;
+    display: flex;
     position: relative;
     filter: none;
     background-color: transparent;
-    width: 500px;
+    width: 450px;
     height: 300px;
     border-radius: 32px;
     border: transparent;
@@ -751,7 +709,7 @@ body {
     align-items: center;  
 }
 .contato h2 span{
-    color: var(--main-color);
+    color: var(--azul1);
 }
 
 .contato form .input-box{
@@ -861,37 +819,12 @@ body {
 /* Responsividade */
 
 /* Renderização */
+
 @media (max-width: 1800px ){
-    .Sobre{
-        flex-direction: row;
-        display: flex;
-        
-    }
-    .Sobre-img1{
-        display: none;
-    }
-    .heading{
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-    .Sobre-content p{
-        font-size: 20px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        text-align: justify;
-        margin-left: 10%;
-    }
-    .Sobre-img2 img{
-        align-items: center;
-        width: 500px;
-        height: 300px;
-        z-index: 80;
-        margin-left: 10%;
-    }
-    .heading span {
-        margin-left: 15px; /* Adicione o espaçamento necessário */
+    .card {
+        width: 390px;
+        height: 240px;
+
     }
 }
 
@@ -921,9 +854,6 @@ body {
         font-size: 2rem;
         margin: 3rem 0;
     }
-    .Sobre-img2 img{
-        margin-left: 0%;
-    }
     .Categoria-container .Categoria-box {
         width: 300px;
         height: 200px;
@@ -950,9 +880,7 @@ body {
     .home-img{
         width: 30vw;
     }
-    body{
-        overflow-x: hidden;
-    }
+    
 }
 @media only screen and (max-width: 950px){
     .home-img {
@@ -968,137 +896,75 @@ body {
         animation: zoonIn 1s ease forwards, floatImage 4s ease-in-out infinite;
         animation-delay: 2s, 3s;
     }
-    .Sobre-img2 img{
-        margin-left: -10%;
-    }
     .contato{
         width: 90%;
         margin-left: 5%;
     }
-    body{
-        overflow-x: hidden;
-    }
+    
 }
 @media only screen and (max-width: 900px){
-    .Sobre-content h2{
-        margin-left: 10%;
-    }
-    .Sobre-content p{
-        margin-left: 15%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 850px){
-    .Sobre-content p{
-        margin-left: 18%;
-    }
-    .Sobre-content h2{
-        margin-left: 15%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 800px){
-    .Sobre-content p{
-        margin-left: 20%;
-    }
-    .Sobre-content h2{
-        margin-left: 20%;
-    }
+
     .Categoria-container .Categoria-box {
         display: grid;
         flex-direction: column;
     }
-    body{
-        overflow-x: hidden;
-    }
+    
 }
 @media only screen and (max-width: 751px){
-    .Sobre-content p{
-        font-size: 1.8rem;
-    }
-    .Sobre-img2 img{
-       margin-left: -20%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 700px){
-    .Sobre-content p{
-        font-size: 1.8rem;
-        margin-left: 23%;
-    }
-    .Sobre-img2 img{
-       margin-left: -25%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 650px){
-    .Sobre-content p{
-        font-size: 1.8rem;
-        margin-left: 25%;
-    }
-    .Sobre-img2 img{
-       margin-left: -30%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 601px){
     .heading{
         font-size: 4rem;
     }
-    .Sobre-content h2{
-        margin-left: 30%
-    }
-    .Sobre-content p{
-        font-size: 1.8rem;
-        margin-left: 35%;
-        width: 60%;
-    }
-    .Sobre-img2 img{
-       margin-left: -35%;
-       width: 450px;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 550px){
-    .Sobre-content p{
-        margin-left: 37%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 /* estou aqui */
 @media only screen and (max-width: 500px){
+    .home-content h1{
+        font-size: 4rem;
+        margin-left: 5%;
+    }
+    .home-content p{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .social-media{
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10%;
+    }
+    .header .logo h1 {
+        display: none;
+    }
     .heading{
         font-size: 3rem;
     }
-    .Sobre-content h2{
-        margin-left: 37%
-    }
-    .Sobre-content p{
-        margin-left: 40%;
-        width: 60%;
-    }
-    .Sobre-img2 img{
-       margin-left: -37%;
-       width: 400px;
-       height: 250px;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
     .Categoria-container .Categoria-box {
         width: 270px;
         height: 150px;
@@ -1115,78 +981,27 @@ body {
     }
 }
 @media only screen and (max-width: 450px){
-    .Sobre-content h2{
-        margin-left: 40%
-    }
-    .Sobre-content p{
-        font-size: 1.8rem;
-        margin-left: 43%;
-        width: 60%;
-    }
-    .Sobre-img2 img{
-       margin-left: -45%;
-       width: 370px;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
 }
 @media only screen and (max-width: 400px){
     .home-img{
         display: none;
     }
-    .Sobre-content h2{
-        margin-left: 43%
-    }
-    .Sobre-content p{
-        font-size: 1.8rem;
-        margin-left: 45%;
-        width: 60%;
-    }
-    .Sobre-img2 img{
-       margin-left: -47%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 350px){
     .home-img {
         display: none;
     }
-    .Sobre-content h2{
-        margin-left: 45%
-    }
-    .Sobre-content p{
-        font-size: 1.8rem;
-        margin-left: 47%;
-        width: 60%;
-    }
-    .Sobre-img2 img{
-       margin-left: -50%;
-    }
-    body{
-        overflow-x: hidden;
-    }
+
+    
 }
 @media only screen and (max-width: 300px){
-    .Sobre-content h2{
-        margin-left: 47%
-    }
-    .Sobre-content p{
-        font-size: 1.6rem;
-        margin-left: 50%;
-        width: 60%;
-    }
-    .Sobre-img2 img{
-       margin-left: -53%;
-       width: 450px;
-    }
+
     .home-img {
         display: none;
     }
-    body{
-        overflow-x: hidden;
-    }
+    
 
 }
