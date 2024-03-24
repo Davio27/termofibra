@@ -203,4 +203,38 @@ function restartSlideInterval() {
 document.querySelector('.prev').addEventListener('click', restartSlideInterval);
 document.querySelector('.next').addEventListener('click', restartSlideInterval);
 
+function ampliar(img) {
+    var modal = document.querySelector('.modal');
+    var modalImg = modal.querySelector('.ampliada');
+    var imageCollection = document.querySelector('.image-collection');
+
+    modal.style.display = "block";
+    modalImg.src = img.src;
+
+    if (window.innerWidth < 600) {
+        // Esconde as imagens na coleção
+        var fundoEscuro = img.parentElement;
+        var todasAsImagens = fundoEscuro.parentElement.parentElement.getElementsByClassName('fundo-escuro');
+        for (var i = 0; i < todasAsImagens.length; i++) {
+            todasAsImagens[i].style.display = "none";
+        }
+    }
+}
+
+document.querySelector('.close-button').addEventListener('click', function() {
+    var modal = document.querySelector('.modal');
+    var imageCollection = document.querySelector('.image-collection');
+
+    modal.style.display = "none";
+    
+    // Exibe novamente as imagens na coleção
+    var todasAsImagens = imageCollection.getElementsByClassName('fundo-escuro');
+    for (var i = 0; i < todasAsImagens.length; i++) {
+        todasAsImagens[i].style.display = "block";
+    }
+});
+
+
+
+
 
